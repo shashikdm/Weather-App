@@ -1,21 +1,23 @@
 const geoCode = require('./utils/geocode.js')
 const weatherCode = require('./utils/weathercode.js')
-const searchString = 'Kapoli'
+const searchString = process.argv[2]
 
-geoCode(searchString, (error, data) => {
+if(!searchString) {
+    return console.log('Please provide a command line argument')
+}
+
+geoCode(process.argv[2], (error, {location, latitude, longitude}) => {
     if(error) {
-        console.log(error)
-    } else {
-        console.log('Location: '+data.location)
-        console.log('Latitude: '+data.latitude+','+' Longitude: '+data.longitude)
-        weatherCode(data.latitude, data.longitude, (error, data) => {
-            if(error) {
-                console.log(error)
-            } else {
-                console.log('Temperature: '+ data.temperature +'C')
-                console.log('Rain chance: '+ data.rainprob*100 +'%')
-                console.log('Summary: '+ data.summary)
-            }
-        })
+        return console.log(error)
     }
+    console.log('Location: '+location)
+    console.log('Latitude: '+latitude+','+' Longitude: '+longitude)
+    weatherCode(latitude, longitude, (error, {temperature, rainprob, summary}) => {
+        if(error) {
+            return console.log(error)
+        }
+        console.log('Temperature: '+ temperature +'C')
+        console.log('Rain chance: '+ rainprob*100 +'%')
+        console.log('Summary: '+ summary)
+    })
 })
