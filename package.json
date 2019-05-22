@@ -1,0 +1,27 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "app to give weather details",
+  "main": "app.js",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shashikdm/WeatherApp.git"
+  },
+  "keywords": [
+    "nodejs",
+    "weatherapp"
+  ],
+  "author": "Shashikant Kadam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shashikdm/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/shashikdm/WeatherApp#readme"
+}
