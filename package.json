@@ -1,7 +1,7 @@
 {
-  "name": "web-server",
+  "name": "weather-app",
   "version": "1.0.0",
-  "description": "Web server",
+  "description": "full stack for weather app",
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +12,21 @@
     "express": "^4.17.0",
     "hbs": "^4.0.4",
     "request": "^2.88.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shashikdm/Weather-App.git"
+  },
+  "keywords": [
+    "weatherapp",
+    "node",
+    "nodejs",
+    "javascript",
+    "api"
+  ],
+  "bugs": {
+    "url": "https://github.com/shashikdm/Weather-App/issues"
+  },
+  "homepage": "https://github.com/shashikdm/Weather-App#readme"
 }
