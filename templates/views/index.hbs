@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    {{>head}}
+    <body>
+        {{>header}}
+        {{>navbar}}
+        <div class = "jumbotron">
+            <form class="form-inline justify-content-center">
+                <label for="address" class="mr-sm-2">Enter Place:</label>
+                <input type="text" name = "address" placeholder = "e.g. Goa" class="form-control mr-sm-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <br/>
+            <div id = "error" class = "justify-content-center text-center"></div>
+            <div id = "result" class = "justify-content-center text-center"></div>
+            <div id = "loading" class = "justify-content-center text-center" style = "visibility:hidden">Fetching data<br/><div class="spinner-border"></div></div>
+            
+        </div> 
+        {{>footer}}
+    </body>
+</html>
